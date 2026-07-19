@@ -28,7 +28,7 @@ Aristidou at the Sustainable Power Systems Lab.
 
 The full assignment brief is provided in:
 
-- [assignment.pdf](./assignment.pdf)
+- [tex/assignment.pdf](./tex/assignment.pdf)
 
 According to the assignment document, students must submit:
 
@@ -49,7 +49,7 @@ penalized according to the assignment rules.
 - **`obs.dat`**: Observable definitions for post-processing
 - **`solveroptions.dat`**: Solver and simulation options
 - **`nothing.dst`**: Empty disturbance file
-- **`assignment.pdf`**: Official assignment handout
+- **`tex/assignment.pdf`**: Official assignment handout (LaTeX sources in `tex/`)
 
 ## Experimental Cases
 
@@ -62,7 +62,7 @@ The assignment defines seven case studies (Cases 1-7), including:
 - Analysis of controllers (governor, AVR, PSS) and load recovery behavior
 
 Use the notebooks as starting points and extend/adapt them to implement all
-required cases from [assignment.pdf](./assignment.pdf).
+required cases from [tex/assignment.pdf](./tex/assignment.pdf).
 
 ## Getting Started
 
