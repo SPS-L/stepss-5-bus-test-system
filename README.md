@@ -1,7 +1,9 @@
-# PyRAMSES Dynamic Simulation Tutorial - 5-Bus Test System
+# 5-Bus Test System - STEPSS Dynamic Simulation Tutorial
 
 This repository contains startup material for dynamic simulation studies with
-[PyRAMSES](https://stepss.sps-lab.org/) on a 5-bus system. The material is
+the [STEPSS](https://stepss.sps-lab.org/) platform on a 5-bus system. The
+simulations can be run either from Python with the PyRAMSES API (used in the
+example notebooks) or through the STEPSS Java interface. The material is
 designed for the **Control and Operation of Electric Power Systems (EEN452)**
 course at Cyprus University of Technology.
 
@@ -64,19 +66,18 @@ required cases from [assignment.pdf](./assignment.pdf).
 
 ## Getting Started
 
-### Prerequisites
+The test case can be run with either of the two STEPSS front-ends; both consume
+the same data files.
 
-- Access to the course JupyterHub platform, or local JupyterLab
-- PyRAMSES installed and available in the notebook environment
-- Basic familiarity with Python and power system dynamics
+### Option A: PyRAMSES (Python, used in the notebooks)
 
-### Installation (local environment)
+Prerequisites: access to the course JupyterHub platform or a local JupyterLab,
+with PyRAMSES available in the notebook environment, and basic familiarity with
+Python and power system dynamics. For a local environment:
 
 ```bash
 pip install matplotlib scipy numpy mkl jupyter ipython pyramses
 ```
-
-### Running the Simulations
 
 1. Open this folder in JupyterHub or JupyterLab.
 2. Start with `Transient Angle.ipynb` or `Case 2.ipynb`.
@@ -85,9 +86,26 @@ pip install matplotlib scipy numpy mkl jupyter ipython pyramses
 	 case.
 5. Plot and comment on the requested observables.
 
+### Option B: STEPSS Java interface
+
+In the [STEPSS Java interface](https://github.com/SPS-L/stepss-java-ui), create
+a simulation with:
+
+- **Data files**: `dyn.dat`, `lf1solv.dat` (or `lf2solv.dat` for operating
+	point 2), and `solveroptions.dat`
+- **Disturbance file**: `nothing.dst`, or a copy extended with the disturbance
+	records of the case under study
+- **Observables file**: `obs.dat`
+
+Run the simulation and inspect the requested observables with the built-in
+plotting tools. Disturbances that the notebooks apply interactively (set-point
+changes, faults, line trips) are entered as timed records in the disturbance
+file instead.
+
 ## References
 
-- [PyRAMSES documentation](https://stepss.sps-lab.org/)
+- [STEPSS documentation](https://stepss.sps-lab.org/) (data formats, PyRAMSES, and the Java interface)
+- [STEPSS Java interface](https://github.com/SPS-L/stepss-java-ui)
 - [EEN452 course page](https://sps-lab.org/courses/een452/)
 - [JupyterHub 5-bus workspace](https://sps.cut.ac.cy/jhub-5-bus)
 - Original exercises by
@@ -95,7 +113,7 @@ pip install matplotlib scipy numpy mkl jupyter ipython pyramses
 
 ## Support
 
-For PyRAMSES technical issues, consult the
+For STEPSS technical issues, consult the
 [official documentation](https://stepss.sps-lab.org/). For course-related
 questions, use the course communication channels.
 
