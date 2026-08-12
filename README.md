@@ -2,7 +2,7 @@
 
 This repository contains startup material for dynamic simulation studies with
 the [STEPSS](https://stepss.sps-lab.org/) platform on a 5-bus system. The
-simulations can be run either from Python with the PyRAMSES API (used in the
+simulations can be run either from Python with the stepss API (used in the
 example notebooks) or through the STEPSS Java interface. The material is
 designed for the **Control and Operation of Electric Power Systems (EEN452)**
 course at Cyprus University of Technology.
@@ -69,14 +69,14 @@ required cases from [tex/assignment.pdf](./tex/assignment.pdf).
 The test case can be run with either of the two STEPSS front-ends; both consume
 the same data files.
 
-### Option A: PyRAMSES (Python, used in the notebooks)
+### Option A: stepss (Python, used in the notebooks)
 
 Prerequisites: access to the course JupyterHub platform or a local JupyterLab,
-with PyRAMSES available in the notebook environment, and basic familiarity with
+with stepss available in the notebook environment, and basic familiarity with
 Python and power system dynamics. For a local environment:
 
 ```bash
-pip install matplotlib scipy numpy mkl jupyter ipython pyramses
+pip install matplotlib scipy numpy mkl jupyter ipython stepss
 ```
 
 1. Open this folder in JupyterHub or JupyterLab.
@@ -104,7 +104,7 @@ file instead.
 
 ## References
 
-- [STEPSS documentation](https://stepss.sps-lab.org/) (data formats, PyRAMSES, and the Java interface)
+- [STEPSS documentation](https://stepss.sps-lab.org/) (data formats, stepss, and the Java interface)
 - [STEPSS Java interface](https://github.com/SPS-L/stepss-java-ui)
 - [EEN452 course page](https://sps-lab.org/courses/een452/)
 - [JupyterHub 5-bus workspace](https://sps.cut.ac.cy/jhub-5-bus)
