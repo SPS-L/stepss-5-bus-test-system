@@ -4,3 +4,5 @@
 *.gz
 *.out
 *.xsim
+*.fls
+*.fdb_latexmk
