@@ -5,4 +5,13 @@
 *.out
 *.xsim
 *.trace
-.ipynb_checkpoints
+*.trj
+*.cur
+.ipynb_checkpoints/
+.claude/
+.mcp.json
+license.dat
+
+# Simulation run products
+*.cont
+*.disc

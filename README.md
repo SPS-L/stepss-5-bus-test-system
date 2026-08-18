@@ -123,3 +123,14 @@ questions, use the course communication channels.
 
 *This material is part of the EEN452 course curriculum at Cyprus University of
 Technology, developed by the Sustainable Power Systems Lab.*
+
+## Status
+
+**Runs.** Both operating points (`lf1solv.dat` and `lf2solv.dat`) initialise and simulate
+against `dyn.dat` and `nothing.dst`.
+
+The two notebooks in this folder, `Case 2.ipynb` and `Transient Angle.ipynb`, are the course
+material and are the place to start.
+
+Verified against **stepss 3.70** (RAMSES 3.70, HELIOS 1.4.1) on Linux.
+
