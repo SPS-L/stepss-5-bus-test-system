@@ -15,3 +15,6 @@ license.dat
 # Simulation run products
 *.cont
 *.disc
+
+# written by the Helios one-line diagram rendering
+5bus_solved.svg
