@@ -48,6 +48,8 @@ penalized according to the assignment rules.
 - **`lf2.dat`, `lf2solv.dat`**: Operating point 2 load-flow and solved state
 - **`obs.dat`**: Observable definitions for post-processing
 - **`solveroptions.dat`**: Solver and simulation options
+- **`5bus.svg`**: One-line diagram template, with `%A`-`%U` placeholder codes
+	substituted by the Helios `1` command
 - **`nothing.dst`**: Empty disturbance file
 - **`tex/assignment.pdf`**: Official assignment handout (LaTeX sources in `tex/`)
 
@@ -102,6 +104,31 @@ plotting tools. Disturbances that the notebooks apply interactively (set-point
 changes, faults, line trips) are entered as timed records in the disturbance
 file instead.
 
+## One-line diagram
+
+`5bus.svg` is a one-line diagram template in the HELIOS placeholder format, laid out after
+the scheme in `5_bus_oneline.png`. Solving the power flow and rendering the template fills
+in every number:
+
+```python
+from stepss.helios import HeliosSession
+
+with HeliosSession() as pf:
+    pf.load_file("lf1.dat")      # or lf2.dat for operating point 2
+    pf.solve()
+    pf.write_diagram("5bus.svg", "5bus_solved.svg")
+```
+
+The same substitution is available from the HELIOS text interface with the `1` command, and
+from the STEPSS Java interface, where the template is the optional third slot on the
+*System Data* tab and every **Run Power Flow** opens the rendered result in its own window.
+
+The template annotates the voltage magnitude and phase angle at all 5 buses, the active and
+reactive output of the equivalent at bus 1 and of generator G at bus 5, the load at bus 2,
+the tap position of the `2-3` load tap changer, and the active and reactive flow at both
+ends of all 4 lines and both transformers. Flows are given at the bus end shown, positive
+out of the bus into the branch.
+
 ## References
 
 - [STEPSS documentation](https://stepss.sps-lab.org/) (data formats, stepss, and the Java interface)
@@ -127,10 +154,10 @@ Technology, developed by the Sustainable Power Systems Lab.*
 ## Status
 
 **Runs.** Both operating points (`lf1solv.dat` and `lf2solv.dat`) initialise and simulate
-against `dyn.dat` and `nothing.dst`.
+against `dyn.dat` and `nothing.dst`, and all four load-flow files solve with Helios.
 
 The two notebooks in this folder, `Case 2.ipynb` and `Transient Angle.ipynb`, are the course
 material and are the place to start.
 
-Verified against **stepss 3.70** (RAMSES 3.70, HELIOS 1.4.1) on Linux.
+Verified against **stepss 3.77** (HELIOS 1.4.1) on Linux.
 
