@@ -51,6 +51,9 @@ penalized according to the assignment rules.
 - **`5bus.svg`**: One-line diagram template, with `%A`-`%U` placeholder codes
 	substituted by the Helios `1` command
 - **`nothing.dst`**: Empty disturbance file
+- **`5bus.cfg`**: STEPSS scenario file: opens operating point 1 in the STEPSS
+	GUI with **File > Load configuration**. Paths are relative to this folder, so
+	it travels with a copy or a move
 - **`tex/assignment.pdf`**: Official assignment handout (LaTeX sources in `tex/`)
 
 ## Experimental Cases
