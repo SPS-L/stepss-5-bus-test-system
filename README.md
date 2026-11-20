@@ -149,7 +149,7 @@ against `dyn.dat` and `nothing.dst`, and all four load-flow files solve with Hel
 The two notebooks in this folder, `Case 2.ipynb` and `Transient Angle.ipynb`, are the course
 material and are the place to start.
 
-Verified against **stepss 3.84** (HELIOS 1.4.1) on macOS, 2026-11-20: both operating points hold their power-flow point exactly on `nothing.dst`.
+Verified against **stepss 3.84** (HELIOS 1.5.0) on macOS, 2026-11-20: both operating points hold their power-flow point exactly on `nothing.dst`.
 
 ## Support
 
