@@ -1,4 +1,4 @@
-# 5-Bus Test System - STEPSS Dynamic Simulation Tutorial
+# 5-Bus Test System: STEPSS Dynamic Simulation Tutorial
 
 This repository contains startup material for dynamic simulation studies with
 the [STEPSS](https://stepss.sps-lab.org/) platform on a 5-bus system. The
@@ -69,7 +69,7 @@ The assignment defines seven case studies (Cases 1-7), including:
 Use the notebooks as starting points and extend/adapt them to implement all
 required cases from [tex/assignment.pdf](./tex/assignment.pdf).
 
-## Getting Started
+## Quick Start
 
 The test case can be run with either of the two STEPSS front-ends; both consume
 the same data files.
@@ -132,7 +132,7 @@ the tap position of the `2-3` load tap changer, and the active and reactive flow
 ends of all 4 lines and both transformers. Flows are given at the bus end shown, positive
 out of the bus into the branch.
 
-## References
+## Documentation
 
 - [STEPSS documentation](https://stepss.sps-lab.org/) (data formats, stepss, and the Java interface)
 - [STEPSS Java interface](https://github.com/SPS-L/stepss-java-ui)
@@ -140,6 +140,16 @@ out of the bus into the branch.
 - [JupyterHub 5-bus workspace](https://sps.cut.ac.cy/jhub-5-bus)
 - Original exercises by
 	[Prof. Thierry Van Cutsem](https://thierryvancutsem.github.io/)
+
+## Status
+
+**Runs.** Both operating points (`lf1solv.dat` and `lf2solv.dat`) initialise and simulate
+against `dyn.dat` and `nothing.dst`, and all four load-flow files solve with Helios.
+
+The two notebooks in this folder, `Case 2.ipynb` and `Transient Angle.ipynb`, are the course
+material and are the place to start.
+
+Verified against **stepss 3.84** (HELIOS 1.4.1) on macOS, 2026-11-20: both operating points hold their power-flow point exactly on `nothing.dst`.
 
 ## Support
 
@@ -153,14 +163,3 @@ questions, use the course communication channels.
 
 *This material is part of the EEN452 course curriculum at Cyprus University of
 Technology, developed by the Sustainable Power Systems Lab.*
-
-## Status
-
-**Runs.** Both operating points (`lf1solv.dat` and `lf2solv.dat`) initialise and simulate
-against `dyn.dat` and `nothing.dst`, and all four load-flow files solve with Helios.
-
-The two notebooks in this folder, `Case 2.ipynb` and `Transient Angle.ipynb`, are the course
-material and are the place to start.
-
-Verified against **stepss 3.77** (HELIOS 1.4.1) on Linux.
-
